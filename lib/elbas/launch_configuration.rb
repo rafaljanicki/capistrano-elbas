@@ -49,9 +49,9 @@ module Elbas
         options = {
           security_groups: base_ec2_instance.security_groups.to_a,
           detailed_instance_monitoring: fetch(:aws_launch_configuration_detailed_instance_monitoring, true),
-          associate_public_ip_address: fetch(:aws_launch_configuration_associate_public_ip, true)
-          iam_instance_profile: iam_instance_profileiam_instance_profile,
-          key_pair: key_pair,
+          associate_public_ip_address: fetch(:aws_launch_configuration_associate_public_ip, true),
+          iam_instance_profile: iam_instance_profile,
+          key_pair: key_pair
         }
 
         if user_data = fetch(:aws_launch_configuration_user_data, nil)
