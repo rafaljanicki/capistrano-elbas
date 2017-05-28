@@ -38,7 +38,7 @@ module Elbas
       end
 
       def iam_instance_profile
-        fetch(:iam_instance_profile, '')
+        fetch(:iam_instance_profile, nil)
       end
 
       def key_pair
